@@ -7,3 +7,7 @@ This program contains various linked list properties:
 4. Print List: To print the entire linked list data.
 5. Remove: To delete the node from the linked list at the given index.
 6. Pop: To delete the last node of the linked list.
+7. Reverse: To reverse the linked list (i.e., converting 1-->2-->3-->4-->null to 4-->3-->2-->1-->null).
+
+# Logic for reversing the Linked-list
+![revlog](https://user-images.githubusercontent.com/43957190/66860474-e4959d80-efaa-11e9-95ea-66d53662b7a2.jpg)
