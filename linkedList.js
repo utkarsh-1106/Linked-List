@@ -78,6 +78,23 @@ class linkedList {
 			array.push(currentNode.value)
 			console.log(array)
 		}
+		reverse() {
+			if(!this.head.next)
+			return this.head
+			else {
+				let first = this.head
+				this.tail = this.head
+				let second = first.next
+				while(second) {
+					const temp = second.next
+					second.next = first
+					first = second
+					second = temp
+				}
+				this.head.next = null
+				this.head = first
+			}
+		}
 	}
 
 const myLinkedList = new linkedList(5);
@@ -104,6 +121,9 @@ myLinkedList.printList();
 myLinkedList.pop();
 myLinkedList.printList();
 // 19-->7-->5-->12-->18-->34
+myLinkedList.reverse();
+myLinkedList.printList();
+// 34-->18-->12-->5-->7-->19
 console.log('\nList length: ',myLinkedList.length);
 // 6
 // console.log(myLinkedList);
