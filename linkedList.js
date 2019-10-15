@@ -35,8 +35,8 @@ class linkedList {
 				}
 					else {
 						let newNode = new node(value)
-						let currentNode = this.head    //For traversing the list
-						let holdPointer
+						let currentNode = this.head    //For traversing the list and stopping at (i-1)th node
+						let holdPointer    //Pointer for holding the (i)th node  
 						while(index-1){
 							currentNode = currentNode.next
 							index--
@@ -53,13 +53,13 @@ class linkedList {
 				if(index === 0)
 				this.head = this.head.next
 				else {
-					let currentNode = this.head
+					let currentNode = this.head    //For traversing the list and stopping at (i-1)th node
 					while(index-1) {
 						currentNode = currentNode.next
 						index--
 					}
-					let holdPointer = currentNode.next.next
-					currentNode.next = holdPointer
+					let holdPointer = currentNode.next.next    //Pointer for holding the (i+1)th node
+					currentNode.next = holdPointer    //Connecting (i-1)th node to (i+1)th node
 				}
 				this.length--
 			}
